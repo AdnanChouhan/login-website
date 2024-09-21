@@ -1,0 +1,180 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #656565, #ffffff);
+    color: #333;
+
+
+
+}
+
+
+nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+nav .logo h1 {
+    margin-inline-start: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-inline-end: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #6b6b6a;
+}
+
+
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    block-size: 80vh;
+}
+
+.login-container {
+    background-color: #838080;
+    padding: 40px;
+    border: 6px solid #050303;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgb(255, 255, 255);
+    inline-size: 350px;
+    animation: fadeInForm 1.5s ease-out;
+}
+
+.login-container h2 {
+    color: #000;
+    text-align: center;
+    margin-block-end: 20px;
+}
+
+.login-container label, 
+.login-container input[type="text"], 
+.login-container input[type="password"] {
+    display: block;
+    inline-size: 100%;
+    margin-block-end: 15px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.login-container input[type="text"], 
+.login-container input[type="password"] {
+    border: 3px solid #000;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container input[type="text"]:focus, 
+.login-container input[type="password"]:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.login-container input[type="submit"] {
+    inline-size: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #8d8a8a;
+    border: 3px solid #434040;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #000;
+    color: #fff;
+    animation: pulse 1s infinite;
+}
+
+.login-container .forgot-password {
+    display: block;
+    text-align: center;
+    margin-block-start: 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-container .forgot-password:hover {
+    color: #000000;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+footer p {
+    margin-block-end: 10px;
+}
+
+footer .footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+footer .footer-links li {
+    margin: 0 15px;
+}
+
+footer .footer-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .footer-links li a:hover {
+    color: #686868;
+}
+
+
+@keyframes fadeInForm  {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
